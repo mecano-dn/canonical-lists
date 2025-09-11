@@ -2,13 +2,13 @@
 
 Luisa Ripoll-Alberola<sup>1,*</sup>, Name 2<sup>2</sup>, Name 3<sup>3</sup>
 
-<sup>*</sup> Corresponding author.
-
 <sup>1</sup> Computational Humanities group, Leipzig University.
 
 <sup>2</sup> Affiliation 2.
 
 <sup>3</sup> Affiliation 3.
+
+<sup>*</sup> Corresponding author: ripoll_alberola@informatik.uni-leipzig.de
 
 *Abstract: Canons are lists. When studying the processes of canon formation, one is therefore inevitably faced with the difficulties of compiling lists. In this paper, we present three case studies in which Wikidata was used to elaborate lists of ancient Greek and Latin authors to trace their presence in different corpora: contemporary academic articles, 20th-century French press, and Early Modern print. Detailing workflows to retrieve, enrich, or reconcile the data available on various databases<sup>+</sup>, this contribution illustrates the possibilities and challenges presented by Wikidata when building transferable methodologies for canonisation studies.*
 
