@@ -14,7 +14,7 @@ Luisa Ripoll-Alberola<sup>1,*</sup>, Name 2<sup>2</sup>, Name 3<sup>3</sup>
 
 <sup>+</sup>See scripts and data on LINK.
 
-**More details about what can be found in this repository:**
+### More details about what can be found in this repository:
 
 **Use Case 1** deals with the presence of ancient authors in the academic discourse of the late 20th century. In the correspondent folder, the following data is present: 
 
