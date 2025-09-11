@@ -162,3 +162,5 @@ for author in authors_dict:
     if author.get('author') == 'Iustinus martyr':
         author['aliases'].remove('giustino')
         author['aliases'].remove('justin')
+
+aliases_df = pd.DataFrame(authors_dict)
