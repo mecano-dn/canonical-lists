@@ -4,7 +4,7 @@ Luisa Ripoll-Alberola<sup>1,*</sup>, Marin-Marie Le Bris<sup>2</sup>, Jonas Paul
 
 <sup>1</sup> Computational Humanities Group, Leipzig University. ORCID: 0009-0001-4611-448X
 
-<sup>2</sup> Cultural and Literary Studies, Radboud University. ORCID: 0009-0009-8459-5358
+<sup>2</sup> Radboud Institute for Culture & History, Radboud University. ORCID: 0009-0009-8459-5358
 
 <sup>3</sup> Computational History Group, University of Helsinki. ORCID: 0009-0008-6283-3637
 
