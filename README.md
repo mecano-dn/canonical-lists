@@ -44,11 +44,11 @@ We therefore use Wikidata and its QIDs as a means to compare the entries from bo
 
 **Step 3**: ‘03_retrieving_wikidata_info_trismegistos_authors.py’ is the script used to retrieve the QIDs associated with the entries from the ‘Trismegistos authors’ list (akin to what is done in **Use Case 1**). As in **Step 2**, it also retrieves English, French, Latin labels and aliases, as well as writing languages for all queried authors. Its main output is the following dataset (an ‘enriched’ version of ‘trismegistos_authors.csv’):
 
-- ‘03_20250914_trismegistos_ancient_authors_wiki_labelled’ 
+- ‘03_20250914_trismegistos_ancient_authors_wiki_labelled.csv’ 
 
 **Step 4**: ‘04_comparing_mediate_trismegistos_qids_authors.py’ is the script used to compare the ancient authors found on the MEDIATE database with the list of Trismegistos authors, based on their retrieved QIDs (in **Step 2** and **Step 3**). Its main output is the set of ‘exclusive’ Trismegistos authors – i.e. Trismegistos authors that have no direct match in the so-far-obtained list of MEDIATE ancient authors:
 
-- ‘04_20250914_exclusive_trismegistos_authors_qids’
+- ‘04_20250914_exclusive_trismegistos_authors_qids.csv’
 
 **Step 5**: '05_matching_exclusive_trismegistos_authors_to_existing_mediate_authors.py’ is the script used to (a) save the entire list of ‘existing’ MEDIATE authors in JSON format and extract numeric VIAF cluster IDs; (b) retrieve VIAF cluster IDs associated with ‘exclusive’ Trismegistos authors, by querying Wikidata; (c) match the set of ‘exclusive’ Trismegistos authors against all MEDIATE authors based on VIAF cluster IDs; and (d) concatenate and augment the so-far-obtained list of MEDIATE ancient authors with the matched ‘exclusive’ Trismegistos authors based on VIAF IDs. Its main results are the following datasets:
 
