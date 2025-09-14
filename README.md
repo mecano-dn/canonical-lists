@@ -22,7 +22,53 @@ Luisa Ripoll-Alberola<sup>1,*</sup>, Marin-Marie Le Bris<sup>2</sup>, Jonas Paul
 - aliases.csv is the enriched version achieved with Wikidata, in which several aliases of the authors, in several languages, were saved.
 - In the code query-1.py one can find the Wikidata queries through which aliases.csv was obtained. 
 
-In **Use Case 2** there are several dataframes dealing with French press...
+**Use Case 2** aims at devising a list of ancient authors to look for in a corpus of French newspapers from the Third Republic (*Troisième République*, 1870-1940).
+
+This undertaking calls for a reliable and transparent way of gauging and tracing the evolution of the Graeco-Roman canon over the period under consideration. While the list of authors presented in **use case 1** (here called 'trismegistos_authors.csv’) constitutes a useful starting point, it does not provide any operable quantitative measurement to assess the relative ranking of its entries. 
+
+We therefore turn to the MEDIATE database, which aggregates information “on books and collectors extracted from a Sandbox corpus of 600 smaller [European] private library (sales) catalogues”, dating from 1665 to 1830. We extract all ‘ancient authors’ (i.e. born between 900 BCE and 500 CE), and the respective number of works (items) found in those catalogues, together with the number of collections in which those works appear (out of 600).
+
+Nevertheless, the missing (metada)data (notably DOB) and unstable identifiers (VIAF cluster IDs) used by MEDIATE make it difficult to assess whether we have been able to identify *all* relevant Graeco-Roman authors registered on the database. To make sure we do not miss any major author, we attempt to compare the initial results from MEDIATE with the ‘Trismegistos authors’ list presented in use case 1. 
+
+The issue is that MEDIATE uses VIAF cluster IDs as unique identifiers while Trismegistos authors have their own identifiers.
+
+We therefore use Wikidata and its QIDs as a means to compare the entries from both lists and produce an extended and enriched table of ancient authors found on the MEDIATE database.
+
+**Step 1**: ‘01_cleaning_mediate_results_xlsx.py’ is the script used to clean the initial results obtained from the MEDIATE database when filtering authors with DOB. Its main result is the following dataset:
+
+<ol><li> ‘ancient_authors_-900_500_mediate_cleaned_results.csv’ (see input > initial_author_lists > mediate > csv)
+</li></ol>
+
+**Step 2**: ‘02_retrieving_wikidata_info_mediate_cleaned_results.py’ is the script used to retrieve the QIDs associated with the ‘cleaned’ entries obtained from MEDIATE in step 1 (which will enable the comparison with the Trismegistos list of authors in step 4). It also retrieves English, French, Latin labels and aliases, as well as writing languages for all the queried authors. Its main result is the following dataset (an ‘enriched’ version of ‘ancient_authors_-900_500_mediate_cleaned_results.csv’):
+
+<ol><li> ‘02_20250912_mediate_ancient_authors_wiki_labelled_last.csv’ 
+</li></ol>
+
+**Step 3**: ‘03_retrieving_wikidata_info_trismegistos_authors.py’ is the script used to retrieve the QIDs associated with the entries from the ‘Trismegistos authors’ list (akin to what is done in **Use Case 1**). As in **Step 2**, it also retrieves English, French, Latin labels and aliases, as well as writing languages for all queried authors. Its main output is the following dataset (an ‘enriched’ version of ‘trismegistos_authors.csv’):
+
+<ol><li> ‘03_20250914_trismegistos_ancient_authors_wiki_labelled’ 
+</li></ol>
+
+**Step 4**: ‘04_comparing_mediate_trismegistos_qids_authors.py’ is the script used to compare the ancient authors found on the MEDIATE database with the list of Trismegistos authors, based on their retrieved QIDs (in **Step 2** and **Step 3**). Its main output is the set of ‘exclusive’ Trismegistos authors – i.e. Trismegistos authors that have no direct match in the so-far-obtained list of MEDIATE ancient authors:
+
+<ol><li> ‘04_20250914_exclusive_trismegistos_authors_qids’ 
+</li></ol>
+
+**Step 5**: '05_matching_exclusive_trismegistos_authors_to_existing_mediate_authors.py’ is the script used to (a) save the entire list of ‘existing’ MEDIATE authors in JSON format and extract numeric VIAF cluster IDs; (b) retrieve VIAF cluster IDs associated with ‘exclusive’ Trismegistos authors, by querying Wikidata; (c) match the set of ‘exclusive’ Trismegistos authors against all MEDIATE authors based on VIAF cluster IDs; and (d) concatenate and augment the so-far-obtained list of MEDIATE ancient authors with the matched ‘exclusive’ Trismegistos authors based on VIAF IDs. Its main results are the following datasets:
+
+<ol>
+<li> ‘05_20250914_unmatched_exclusive_trismegistos_authors.csv’
+</li>
+<li> ‘05_20250914_concatenated_mediate_ancient_authors.csv’ 
+</li>
+</ol>
+
+**Step 6** ‘06_manually_adding_authors_to_final_mediate_csv.py’ is the script used to add authors found in the ‘05_20250914_unmatched_exclusive_trismegistos_authors.csv’ to the previously arrived at‘05_20250914_concatenated_mediate_ancient_authors.csv’, by manually searching for these remaining ‘exclusive’ Trismegistos authors within the JSON table containing all existing authors from the MEDIATE database. Its main output is the following dataset:
+
+<ol>
+<li> ‘06_20250914_updated_mediate_ancient_authors.csv’
+</li>
+</ol>
 
 **Use Case 3** focuses on the reception of ancient authors in Early Modern print in Great Britain and France. The data collected here extends beyond the immediate focus of the use case though and lays the groundwork for future work with the data Wikidata can provide on ancient authors. In the corresponding folder, the following data is present both as CSV files and underlying Python code:
 
