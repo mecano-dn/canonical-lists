@@ -18,7 +18,7 @@ Luisa Ripoll-Alberola<sup>1,*</sup>, Marin-Marie Le Bris<sup>2</sup>, Jonas Paul
 
 **Use Case 1** deals with the presence of ancient authors in the academic discourse of the late 20th century. In the correspondent folder, the following data is present: 
 
-- MECANO.csv is the first list of 200 authors provided directly by the Trismegistos database (acknowledgements to prof. Mark Depauw).
+- MECANO_authors.csv is the first list of 200 authors provided directly by the Trismegistos database (acknowledgements to prof. Mark Depauw).
 - aliases.csv is the enriched version achieved with Wikidata, in which several aliases of the authors, in several languages, were saved.
 - In the code query-1.py one can find the Wikidata queries through which aliases.csv was obtained. 
 
