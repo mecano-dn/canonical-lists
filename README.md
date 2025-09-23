@@ -16,19 +16,19 @@ Luisa Ripoll-Alberola<sup>1,*</sup>, Marin-Marie Le Bris<sup>2</sup>, Jonas Paul
 
 ### More details about what can be found in this repository:
 
-**Use Case 1** deals with the presence of ancient authors in the academic discourse of the late 20th century. In the correspondent folder, the following data is present: 
+**Case Study 1** deals with the presence of ancient authors in the academic discourse of the late 20th century. In the correspondent folder, the following data is present: 
 
 - MECANO_authors.csv is the first list of 200 authors provided directly by the Trismegistos database (acknowledgements to prof. Mark Depauw).
 - aliases.csv is the enriched version achieved with Wikidata, in which several aliases of the authors, in several languages, were saved.
 - In the code query-1.py one can find the Wikidata queries through which aliases.csv was obtained. 
 
-**Use Case 2** aims at devising a list of ancient authors to look for in a corpus of French newspapers from the Third Republic (*Troisième République*, 1870-1940).
+**Case Study 2** aims at devising a list of ancient authors to look for in a corpus of French newspapers from the Third Republic (*Troisième République*, 1870-1940).
 
-This undertaking calls for a reliable and transparent way of gauging and tracing the evolution of the Graeco-Roman canon over the period under consideration. While the list of authors presented in **use case 1** (here called 'trismegistos_authors.csv’) constitutes a useful starting point, it does not provide any operable quantitative measurement to assess the relative ranking of its entries. 
+This undertaking calls for a reliable and transparent way of gauging and tracing the evolution of the Graeco-Roman canon over the period under consideration. While the list of authors presented in **case study 1** (here called 'trismegistos_authors.csv’) constitutes a useful starting point, it does not provide any operable quantitative measurement to assess the relative ranking of its entries. 
 
 We therefore turn to the MEDIATE database, which aggregates information “on books and collectors extracted from a Sandbox corpus of 600 smaller [European] private library (sales) catalogues”, dating from 1665 to 1830. We extract all ‘ancient authors’ (i.e. born between 900 BCE and 500 CE), and the respective number of works (items) found in those catalogues, together with the number of collections in which those works appear (out of 600).
 
-Nevertheless, the missing (metada)data (notably DOB) and unstable identifiers (VIAF cluster IDs) used by MEDIATE make it difficult to assess whether we have been able to identify *all* relevant Graeco-Roman authors registered on the database. To make sure we do not miss any major author, we attempt to compare the initial results from MEDIATE with the ‘Trismegistos authors’ list presented in use case 1. 
+Nevertheless, the missing (metada)data (notably DOB) and unstable identifiers (VIAF cluster IDs) used by MEDIATE make it difficult to assess whether we have been able to identify *all* relevant Graeco-Roman authors registered on the database. To make sure we do not miss any major author, we attempt to compare the initial results from MEDIATE with the ‘Trismegistos authors’ list presented in case study 1. 
 
 The issue is that MEDIATE uses VIAF cluster IDs as unique identifiers while Trismegistos authors have their own identifiers.
 
@@ -42,7 +42,7 @@ We therefore use Wikidata and its QIDs as a means to compare the entries from bo
 
 - ‘02_20250912_mediate_ancient_authors_wiki_labelled_last.csv’ 
 
-**Step 3**: ‘03_retrieving_wikidata_info_trismegistos_authors.py’ is the script used to retrieve the QIDs associated with the entries from the ‘Trismegistos authors’ list (akin to what is done in **Use Case 1**). As in **Step 2**, it also retrieves English, French, Latin labels and aliases, as well as writing languages for all queried authors. Its main output is the following dataset (an ‘enriched’ version of ‘trismegistos_authors.csv’):
+**Step 3**: ‘03_retrieving_wikidata_info_trismegistos_authors.py’ is the script used to retrieve the QIDs associated with the entries from the ‘Trismegistos authors’ list (akin to what is done in **Case Study 1**). As in **Step 2**, it also retrieves English, French, Latin labels and aliases, as well as writing languages for all queried authors. Its main output is the following dataset (an ‘enriched’ version of ‘trismegistos_authors.csv’):
 
 - ‘03_20250914_trismegistos_ancient_authors_wiki_labelled.csv’ 
 
@@ -59,7 +59,7 @@ We therefore use Wikidata and its QIDs as a means to compare the entries from bo
 
 - ‘06_20250914_updated_mediate_ancient_authors.csv’
 
-**Use Case 3** focuses on the reception of ancient authors in Early Modern print in Great Britain and France. The data collected here extends beyond the immediate focus of the use case though and lays the groundwork for future work with the data Wikidata can provide on ancient authors. In the corresponding folder, the following data is present both as CSV files and underlying Python code:
+**Case Study 3** focuses on the reception of ancient authors in Early Modern print in Great Britain and France. The data collected here extends beyond the immediate focus of the case study though and lays the groundwork for future work with the data Wikidata can provide on ancient authors. In the corresponding folder, the following data is present both as CSV files and underlying Python code:
 
 - ancient_authors_wikidata_with_precision is the basis of all other queries in this folder. It provides a list of all authors in Wikidata that have an ancient world related identifier assigned to them. Besides their Q-ID and label in English it also lists VIAF identifiers, Bibliothèque Nationale de France identifiers, as well as birth, death and floruit years together with a precision indicator for these dates.
 - ancient_authors_wikidata_author_languages collects the languages the ancient authors wrote in, their native language, spoken language and the language of the names of their works.
