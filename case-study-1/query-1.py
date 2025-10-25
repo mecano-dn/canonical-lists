@@ -3,7 +3,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import urllib.error
 import time
 
-df_authors = pd.read_csv(r'\path\MECANO_authors.csv', header = None)
+df_authors = pd.read_csv(r'\path\trismegistos_authors.csv', header = None)
 
 # Create the dictionary using a lambda function
 authors_dict = list(map(lambda row: {
