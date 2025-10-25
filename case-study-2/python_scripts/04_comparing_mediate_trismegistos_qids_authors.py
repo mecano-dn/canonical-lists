@@ -10,13 +10,13 @@ import traceback
 
 ## 1.1. File paths to CSVs
 
-TRISMEGISTOS_AUTHORS_CSV = r'path_to\use-case-2\output\authors_csv\03_trismegistos_ancient_authors_csv_wiki\03_last\03_20250914_trismegistos_ancient_authors_wiki_labelled.csv'
-MEDIATE_AUTHORS_CSV = r'path_to\use-case-2\output\authors_csv\02_mediate_ancient_authors_csv_wiki\02_last\02_20250912_mediate_ancient_authors_wiki_labelled_last.csv'
+TRISMEGISTOS_AUTHORS_CSV = r'path_to\case-study-2\output\authors_csv\03_trismegistos_ancient_authors_csv_wiki\03_last\03_20250914_trismegistos_ancient_authors_wiki_labelled.csv'
+MEDIATE_AUTHORS_CSV = r'path_to\case-study-2\output\authors_csv\02_mediate_ancient_authors_csv_wiki\02_last\02_20250912_mediate_ancient_authors_wiki_labelled_last.csv'
 
 ## 1.2. Directories
 
-OUTPUT_CSV_DIR = r'path_to\use-case-2\output\authors_csv'
-ERROR_LOG_DIR = r'path_to\use-case-2\output\error_logs'
+OUTPUT_CSV_DIR = r'path_to\case-study-2\output\authors_csv'
+ERROR_LOG_DIR = r'path_to\case-study-2\output\error_logs'
 
 ## 1.3. Other
 
@@ -213,4 +213,5 @@ df_union: the DataFrame containing the information regarding authors comprising 
 if __name__ == "__main__":
     df_exclusive_trismegistos, df_exclusive_mediate, df_intersection, df_union = comparing_mediate_and_trismegistos_authors(
         TRISMEGISTOS_AUTHORS_CSV, MEDIATE_AUTHORS_CSV, OUTPUT_CSV_DIR, ERROR_LOG_DIR
+
     )
