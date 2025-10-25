@@ -10,11 +10,11 @@ from datetime import datetime
 
 ## 1.1.: File paths
 
-INPUT_MEDIATE_ANCIENT_AUTHORS_CSV = r'path_to\use-case-2\output\authors_csv\05_matching_exclusive_trismegistos_authors_to_mediate_authors\05_last\05_20250914_concatenated_mediate_ancient_authors.csv'
+INPUT_MEDIATE_ANCIENT_AUTHORS_CSV = r'path_to\case-study-2\output\authors_csv\05_matching_exclusive_trismegistos_authors_to_mediate_authors\05_last\05_20250914_concatenated_mediate_ancient_authors.csv'
 
 ## 1.2.: Directories
 
-OUTPUT_CSV_DIR = r'path_to\use-case-2\output\authors_csv'
+OUTPUT_CSV_DIR = r'path_to\case-study-2\output\authors_csv'
 
 ## 1.3.: Other
 
@@ -380,4 +380,5 @@ updated_mediate_ancient_authors_csv_path (str): path to the last (final?) CSV co
 
 ### Step 4: Calling the function
 if __name__ == '__main__':
+
     manually_adding_authors_to_mediate_ancient_authors_csv(INPUT_MEDIATE_ANCIENT_AUTHORS_CSV, OUTPUT_CSV_DIR, LIST_AUTHORS_AS_DICTS, sort=True)
