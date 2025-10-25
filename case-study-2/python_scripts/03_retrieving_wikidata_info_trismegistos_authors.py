@@ -14,14 +14,14 @@ import traceback
 
 ## 1.1.: File path to initial authors' list
 
-INPUT_AUTHORS_LIST = r'path_to\use-case-2\input\initial_author_lists\trismegistos\trismegistos_authors.csv'
+INPUT_AUTHORS_LIST = r'path_to\case-study-2\input\initial_author_lists\trismegistos\trismegistos_authors.csv'
 
 ## 1.2.: Source of the list
 SOURCE = 'trismegistos'
 
 ## 1.3.: Relevant directories
-OUTPUT_CSV_DIR = r'path_to\use-case-2\output\authors_csv'
-ERROR_LOG_DIR = r'path_to\use-case-2\output\error_logs'
+OUTPUT_CSV_DIR = r'path_to\case-study-2\output\authors_csv'
+ERROR_LOG_DIR = r'path_to\case-study-2\output\error_logs'
 
 ## 1.4. SPARQL endpoint
 SPARQL = SPARQLWrapper("https://query.wikidata.org/sparql",
@@ -306,4 +306,5 @@ Returns:
 ### Step 3: Calling the function to retrieve QIDs, labels, aliases and writing languages associated with authors from the Trismegistos list
 
 if __name__ == "__main__":
+
     retrieve_qids_aliases_lang_trismegistos_wikidata(INPUT_AUTHORS_LIST, SOURCE, SPARQL, OUTPUT_CSV_DIR, ERROR_LOG_DIR)
