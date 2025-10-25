@@ -10,10 +10,10 @@ import traceback
 
 ### Step 1: Defining relevant directories, file paths and variables
 
-INPUT_AUTHOR_LIST = r'path_to\use-case-2\input\initial_author_lists\mediate\csv\cleaned_results\ancient_authors_-900_500_mediate_cleaned_results.csv'
+INPUT_AUTHOR_LIST = r'path_to\case-study-2\input\initial_author_lists\mediate\csv\cleaned_results\ancient_authors_-900_500_mediate_cleaned_results.csv'
 SOURCE = 'mediate'
-OUTPUT_CSV_DIR = r'path_to\use-case-2\output\authors_csv'
-ERROR_LOG_DIR = r'path_to\use-case-2\output\error_logs'
+OUTPUT_CSV_DIR = r'path_to\case-study-2\output\authors_csv'
+ERROR_LOG_DIR = r'path_to\case-study-2\output\error_logs'
 INTERMEDIATE_TAG = '02_intermediate'
 LAST_TAG = '02_last'
 
