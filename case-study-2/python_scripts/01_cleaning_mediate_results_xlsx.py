@@ -10,7 +10,7 @@ import re
 
 ## 1.1. Path to initial XLSX results from MEDIATE
 
-MEDIATE_LISTS_DIR = r'path_to\use-case-2\input\initial_author_lists\mediate'
+MEDIATE_LISTS_DIR = r'path_to\case-study-2\input\initial_author_lists\mediate'
 XLSX_SUBDIR = 'xlsx'
 MEDIATE_XLSX_RAW_RESULTS_FILE_NAME = r'ancient_authors_-900_500_mediate.xlsx'
 MEDIATE_XLSX_RAW_RESULTS_FILE_PATH = os.path.join(MEDIATE_LISTS_DIR, XLSX_SUBDIR, MEDIATE_XLSX_RAW_RESULTS_FILE_NAME)
@@ -229,4 +229,5 @@ mediate_cleaned_results_csv_path = os.path.join(mediate_cleaned_results_csv_subd
 
 # final save
 df_cleaned_mediate_raw_results.to_csv(mediate_cleaned_results_csv_path, index=False)
+
 print(f"[i] Successfully saved the df_cleaned_mediate_raw_results as CSV: {mediate_cleaned_results_csv_path}.")
