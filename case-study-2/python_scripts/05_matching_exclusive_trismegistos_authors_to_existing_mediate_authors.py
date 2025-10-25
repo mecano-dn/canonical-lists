@@ -13,15 +13,15 @@ from collections import defaultdict
 
 ## 1.1. File paths
 
-ALL_MEDIATE_AUTHORS_RAW_TABLE_JSON = r'path_to\use-case-2\input\initial_author_lists\mediate\json\mediate_all_authors_table_raw\mediate_all_authors_table_raw.json'
-EXCLUSIVE_TRISMEGISTOS_AUTHORS_CSV = r'path_to\use-case-2\output\authors_csv\04_comparing_mediate_and_trismegistos_ancient_authors_qids\04_last\04_20250914_exclusive_trismegistos_authors_qids.csv'
-MEDIATE_ANCIENT_AUTHORS_WIKI_LABELLED = r'path_to\use-case-2\output\authors_csv\02_mediate_ancient_authors_csv_wiki\02_last\02_20250912_mediate_ancient_authors_wiki_labelled_last.csv'
+ALL_MEDIATE_AUTHORS_RAW_TABLE_JSON = r'path_to\case-study-2\input\initial_author_lists\mediate\json\mediate_all_authors_table_raw\mediate_all_authors_table_raw.json'
+EXCLUSIVE_TRISMEGISTOS_AUTHORS_CSV = r'path_to\case-study-2\output\authors_csv\04_comparing_mediate_and_trismegistos_ancient_authors_qids\04_last\04_20250914_exclusive_trismegistos_authors_qids.csv'
+MEDIATE_ANCIENT_AUTHORS_WIKI_LABELLED = r'path_to\case-study-2\output\authors_csv\02_mediate_ancient_authors_csv_wiki\02_last\02_20250912_mediate_ancient_authors_wiki_labelled_last.csv'
 
 ## 1.2. Directories
 
-OUTPUT_CSV_DIR = r'path_to\use-case-2\output\authors_csv'
-MEDIATE_AUTHORS_JSON_DIR = r'path_to\use-case-2\input\initial_author_lists\mediate\json'
-ERROR_LOG_DIR = r'path_to\use-case-2\output\error_logs'
+OUTPUT_CSV_DIR = r'path_to\case-study-2\output\authors_csv'
+MEDIATE_AUTHORS_JSON_DIR = r'path_to\case-study-2\input\initial_author_lists\mediate\json'
+ERROR_LOG_DIR = r'path_to\case-study-2\output\error_logs'
 
 ## 1.3. SPARQL Setup
 
@@ -600,4 +600,5 @@ if __name__ == "__main__":
 
     except Exception as main_e:
         print(f"|!| Pipeline failed because of the following error: {main_e}")
+
         traceback.print_exc()
